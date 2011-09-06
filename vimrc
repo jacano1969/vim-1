@@ -56,13 +56,6 @@ syntax on
 set nobackup
 
 "===================================================================
-" Latex
-"===================================================================
-set grepprg=grep\ -nH\ $*
-let g:tex_flavor = "latex"
-let g:Tex_DefaultTargetFormat = "pdf"
-"set runtimepath=~/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,~/.vim/after
-"===================================================================
 " Autocommands
 "===================================================================
 "filetype list extension
@@ -76,6 +69,8 @@ autocmd BufRead *.fish set filetype=fish
 "===================================================================
 " Mappings 
 "===================================================================
+"remap leader
+let mapleader = ","
 "save
 map <C-s> :wa<CR>
 imap <C-s> <ESC>:wa<CR>li
@@ -140,12 +135,25 @@ ab shabang #!/bin/bash
 "===================================================================
 " Plugin tweaks
 "===================================================================
+
+" Latex
+"set grepprg=grep\ -nH\ $*
+"let g:tex_flavor = "latex"
+"let g:Tex_DefaultTargetFormat = "pdf"
+"set runtimepath=~/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,~/.vim/after
+
 "xhtml plugin tweaks
 let g:do_xhtml_mappings=1
 let g:no_html_tab_mapping=1
 let g:no_html_toolbar=1
+
 "vimperator view source fix
 let g:netrw_http_cmd = "wget -q -O"
+
+"command-t config
+noremap <leader>o <Esc>:CommandT<CR>
+noremap <leader>O <Esc>:CommandTFlush<CR>
+noremap <leader>m <Esc>:CommandTBuffer<CR>
 
 "zen coding config
 "let g:user_zen_expandabbr_key = '<c-e>'
