@@ -70,7 +70,7 @@ autocmd BufRead *.fish set filetype=fish
 " Mappings 
 "===================================================================
 "remap leader
-let mapleader = ","
+"let mapleader = ","
 "save
 map <C-s> :wa<CR>
 imap <C-s> <ESC>:wa<CR>li
@@ -158,3 +158,6 @@ noremap <leader>m <Esc>:CommandTBuffer<CR>
 "zen coding config
 "let g:user_zen_expandabbr_key = '<c-e>'
 "let g:use_zen_complete_tag = 1
+
+"supertab omnicompletion
+let g:SuperTabDefaultCompletionType = "context"
