@@ -6,12 +6,16 @@
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+"set encoding
+set encoding=utf-8
 "256 colors
 set t_Co=256
 "vim extended mode
 set nocompatible
 "enable line numbers
 set number
+"enable relative numbers
+set relativenumber
 "enable mouse compatibity
 set mouse=a
 "no beep or flash for errors
