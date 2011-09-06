@@ -147,3 +147,6 @@ let g:no_html_toolbar=1
 "vimperator view source fix
 let g:netrw_http_cmd = "wget -q -O"
 
+"zen coding config
+"let g:user_zen_expandabbr_key = '<c-e>'
+"let g:use_zen_complete_tag = 1
