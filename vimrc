@@ -93,6 +93,7 @@ map <A-k> :bp<CR>
 
 "list buffers
 map <A-Down> :ls<CR>
+map <A-i> :ls<CR>
 
 "close
 map <C-q> :q<CR>
