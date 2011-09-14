@@ -15,7 +15,7 @@ set nocompatible
 "enable line numbers
 set number
 "enable relative numbers
-set relativenumber
+setglobal relativenumber
 "enable mouse compatibity
 set mouse=a
 "no beep or flash for errors
