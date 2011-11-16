@@ -16,6 +16,7 @@ set nocompatible
 set number
 "enable relative numbers
 setglobal relativenumber
+setlocal relativenumber
 "enable mouse compatibity
 set mouse=a
 "no beep or flash for errors
@@ -34,7 +35,8 @@ set tabstop=4
 set backspace=indent,eol,start
 "max tab number
 set tabpagemax=15
-set guifont=Terminus\ 11
+"set guifont=Ubuntu\ Mono\ 13
+set guifont=Terminus\ 12
 "set guifont=Droid\ Sans\ Mono\ 13
 "statusline
 set laststatus=2
@@ -106,6 +108,8 @@ imap <C-Tab> <ESC> :tabnext <CR>
 map  <C-S-Tab> :tabprevious <CR>
 imap <C-S-Tab> <ESC> :tabprevious <CR>
 
+"filetype to html
+noremap <leader>h <Esc>:set filetype=html<CR>
 "cut
 "map <C-S-x> "*x
 "imap <C-S-x> <ESC>"*x
