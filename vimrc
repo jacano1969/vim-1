@@ -10,6 +10,8 @@ call pathogen#helptags()
 set encoding=utf-8
 "256 colors
 set t_Co=256
+"colorscheme
+colorscheme lucius
 "vim extended mode
 set nocompatible
 "enable line numbers
@@ -35,8 +37,9 @@ set tabstop=4
 set backspace=indent,eol,start
 "max tab number
 set tabpagemax=15
-"set guifont=Ubuntu\ Mono\ 13
-set guifont=Terminus\ 12
+"set font
+set guifont=Ubuntu\ Mono\ 12
+"set guifont=Monospace\ 13
 "set guifont=Droid\ Sans\ Mono\ 13
 "statusline
 set laststatus=2
@@ -47,11 +50,9 @@ set statusline+=%=
 "statusline: lines number, column number, percent
 set statusline+=[L:\ %l/%L]\ [C:\ %v]\ [%p%%]
 "set all but toolbar
-set guioptions=aegimrLt 
+set guioptions=aegit 
 "set right mouse click to popup
 set mousemodel=popup
-"nice colortheme
-colorscheme lucius
 "enable filetype detection
 filetype on
 "enable filetype plugins
@@ -60,6 +61,8 @@ filetype plugin on
 syntax on
 "no backup files
 set nobackup
+"tags
+set tags=tags;/
 
 "===================================================================
 " Autocommands
@@ -71,6 +74,7 @@ autocmd BufRead *.hx set filetype=actionscript
 autocmd BufRead *.mxml set filetype=actionscript
 autocmd BufRead *.rb set filetype=ruby
 autocmd BufRead *.fish set filetype=fish
+autocmd BufRead mutt-ator-mail* set filetype=html
 
 "===================================================================
 " Mappings 
@@ -86,16 +90,16 @@ map <A-o> :browse tabnew<CR>
 imap <A-o> <ESC>:browse tabnew<CR>i
 
 "switch to next buffer
-map <A-Right> :bn<CR>
 map <A-j> :bn<CR>
+map <C-j> :bn<CR>
 
 "switch to previous buffer
-map <A-Left> :bp<CR>
 map <A-k> :bp<CR>
+map <C-k> :bp<CR>
 
 "list buffers
-map <A-Down> :ls<CR>
 map <A-i> :ls<CR>
+map <C-i> :ls<CR>
 
 "close
 map <C-q> :q<CR>
@@ -140,6 +144,10 @@ ab vdump var_dump( );<ESC>2hi
 ab clspan <span style="clear:both; display:block"><!--  --></span>
 "bash
 ab shabang #!/bin/bash
+"javascript
+ab conlog console.log();<ESC>h
+ab mlog MoodleMobApp.log();<ESC>h
+ab llog // -log-
 
 "===================================================================
 " Plugin tweaks
@@ -163,6 +171,9 @@ let g:netrw_http_cmd = "wget -q -O"
 noremap <leader>o <Esc>:CommandT<CR>
 noremap <leader>O <Esc>:CommandTFlush<CR>
 noremap <leader>m <Esc>:CommandTBuffer<CR>
+
+"tagbar config
+nmap <F8> :TagbarToggle<CR>
 
 "zen coding config
 "let g:user_zen_expandabbr_key = '<c-e>'
