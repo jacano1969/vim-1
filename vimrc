@@ -81,6 +81,12 @@ autocmd BufRead mutt-ator-mail* set filetype=html
 "===================================================================
 "remap leader
 "let mapleader = ","
+"navigate splits
+"map <C-S-J> <C-w>j<C-w><ESC>
+"map <C-S-K> <C-w>k<C-w><ESC>
+"map <C-S-L> <C-w>l<C-w><ESC>
+"map <C-S-H> <C-w>h<C-w><ESC>
+
 "save
 map <C-s> :wa<CR>
 imap <C-s> <ESC>:wa<CR>li
@@ -112,6 +118,7 @@ imap <C-Tab> <ESC> :tabnext <CR>
 map  <C-S-Tab> :tabprevious <CR>
 imap <C-S-Tab> <ESC> :tabprevious <CR>
 
+
 "filetype to html
 noremap <leader>h <Esc>:set filetype=html<CR>
 "cut
@@ -140,7 +147,9 @@ ab rubins <% %><ESC>2hi
 ab rubli  <%= link_to "", :action => "" %><ESC>3F"
 "php
 ab phpins <?php ?><ESC>2hi
-ab vdump var_dump( );<ESC>2hi
+ab vdump var_dump();<ESC>i
+ab prir print_r();<ESC>i
+"html
 ab clspan <span style="clear:both; display:block"><!--  --></span>
 "bash
 ab shabang #!/bin/bash
@@ -167,17 +176,9 @@ let g:no_html_toolbar=1
 "vimperator view source fix
 let g:netrw_http_cmd = "wget -q -O"
 
-"command-t config
-noremap <leader>o <Esc>:CommandT<CR>
-noremap <leader>O <Esc>:CommandTFlush<CR>
-noremap <leader>m <Esc>:CommandTBuffer<CR>
-
 "tagbar config
 nmap <F8> :TagbarToggle<CR>
 
 "zen coding config
 "let g:user_zen_expandabbr_key = '<c-e>'
 "let g:use_zen_complete_tag = 1
-
-"supertab omnicompletion
-let g:SuperTabDefaultCompletionType = "context"
