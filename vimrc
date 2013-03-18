@@ -91,21 +91,14 @@ autocmd BufRead mutt-ator-mail* set filetype=html
 map <C-s> :wa<CR>
 imap <C-s> <ESC>:wa<CR>li
 
-"open new tab
-map <A-o> :browse tabnew<CR>
-imap <A-o> <ESC>:browse tabnew<CR>i
-
 "switch to next buffer
-map <A-j> :bn<CR>
 map <C-j> :bn<CR>
 
 "switch to previous buffer
-map <A-k> :bp<CR>
 map <C-k> :bp<CR>
 
 "list buffers
-map <A-i> :ls<CR>
-map <C-i> :ls<CR>
+map <leader>i :ls<CR>
 
 "close
 map <C-q> :q<CR>
@@ -121,6 +114,7 @@ imap <C-S-Tab> <ESC> :tabprevious <CR>
 
 "filetype to html
 noremap <leader>h <Esc>:set filetype=html<CR>
+
 "cut
 "map <C-S-x> "*x
 "imap <C-S-x> <ESC>"*x
@@ -182,3 +176,13 @@ nmap <F8> :TagbarToggle<CR>
 "zen coding config
 "let g:user_zen_expandabbr_key = '<c-e>'
 "let g:use_zen_complete_tag = 1
+
+"CtrlP
+nnoremap <leader>f :CtrlP<CR>
+nnoremap <leader>b :CtrlPBuffer<CR>
+nnoremap <leader>T :CtrlPBufTag<CR>
+nnoremap <leader>t :CtrlPTag<CR>
+nnoremap <leader>F :CtrlPCurWD<CR>
+nnoremap <leader>M :CtrlPMRUFiles<CR>
+nnoremap <leader>m :CtrlPMixed<CR>
+nnoremap <leader>l :CtrlPLine<CR>
